@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get dist-upgrade -y && \
     apt-get install -y git cmake build-essential clang ca-certificates curl \
-    unzip libboost-dev python3-dev python3-pip && apt-get clean
+    unzip libboost-dev python3-dev python3-pip && pip install lief && apt-get clean
 
 # get and install the latest z3 relesae
 RUN cd /tmp && \
